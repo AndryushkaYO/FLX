@@ -1,5 +1,5 @@
-var price = prompt("Enter your number (0-9999999): ");
-var discount = prompt("Enter your discount (0-99): ");
+var price = prompt("Enter your number (0-9999999): ","");
+var discount = prompt("Enter your discount (0-99): ","");
 
 if ((price === "" || discount === "") || (isNaN(price) || isNaN(discount) ||
         (price < 0 || price > 9999999) || (discount < 0 || discount > 99))) {

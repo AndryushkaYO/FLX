@@ -1,6 +1,6 @@
-var a = prompt("Enter a: ");
-var b = prompt("Enter b: ");
-var c = prompt("Enter c: ");
+var a = prompt("Enter a: ","");
+var b = prompt("Enter b: ","");
+var c = prompt("Enter c: ","");
 
 if (isNaN(a) || isNaN(b) || isNaN(c) ||
     (a === "") || (b === "") || (c === "")||+a===0) {

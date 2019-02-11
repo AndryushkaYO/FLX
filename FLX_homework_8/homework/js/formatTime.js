@@ -4,26 +4,18 @@
 function formatTime(minutes) {
     var d = 0,
         h = 0,
-        m = 0;
-    if ((minutes % 1440) === 0) {
-        d = minutes / 1440;
-    } else if ((minutes % 60) === 0) {
-        h = minutes / 60;
-    } else if (minutes < 60) {
-        m = minutes;
-    } else {
-        do {
+        m = 0;    
+        do {            
+            if (minutes >= 60) {
+                minutes -= 60;
+                h++;
+            }
             if (h === 24) {
                 d++;
                 h = 0;
             }
-            if (minutes > 60) {
-                minutes -= 60;
-                h++;
-            }
-        } while (minutes > 60);
-        m = minutes;
-    }
+        } while (minutes >= 60);
+        m = minutes;    
     return (d + " day(s) " + h + " hour(s) " + m + " minute(s)");
 }
 alert(formatTime(120));

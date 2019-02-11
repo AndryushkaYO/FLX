@@ -1,5 +1,5 @@
 function isInteger(a){
-	return ((a*10)%10)===0;
+	return (a%1)===0;
 }
 
 alert(isInteger(5));

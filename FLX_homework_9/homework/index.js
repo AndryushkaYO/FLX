@@ -130,21 +130,8 @@ console.log(values({ keyOne: 1, keyTwo: 2, keyThree: 3 }));
 
 // ----  Task 9   ----
 function showFormattedDate(date) {
-    var month = [
-        "Jan",
-        "Feb",
-        "Mar",
-        "Apr",
-        "May",
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep",
-        "Oct",
-        "Nov",
-        "Dec"
-    ];
-    return "Date: " + date.getDate() + " of " + month[date.getMonth()] + ", " + date.getFullYear();
+    return "Date: " + date.getDate() + " of " + date.toLocaleString('en-US', { month: 'short' }) +
+        ", " + date.getFullYear();
 }
 console.log(showFormattedDate(new Date('2019-01-27T01:10:00')));
 

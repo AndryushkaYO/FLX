@@ -1,4 +1,4 @@
-function UserCard(index) {
+function userCard(index) {
     let balance = 100;
     let transactionLimit = 100;
     let historyLogs = [];
@@ -69,7 +69,7 @@ class UserAccount {
             if (typeof card !== 'undefined') {
                 this.cards.push(card);
             } else {
-                this.cards.push(new UserCard(this.cards.length + 1));
+                this.cards.push(userCard(this.cards.length + 1));
             }
         } else {
             console.error('User can have only 3 or less cards!');
@@ -84,8 +84,8 @@ class UserAccount {
 /*
 let user = new UserAccount('Bob');
 
-user.addCard()
-user.addCard()
+user.addCard();
+user.addCard();
 
 let card1 = user.getCardByKey(1);
 let card2 = user.getCardByKey(2);

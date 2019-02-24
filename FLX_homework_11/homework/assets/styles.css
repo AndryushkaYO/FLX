@@ -1,4 +1,3 @@
-/* Your styles goes here */
 #root {
     width: 100%;
     display: flex;
@@ -95,8 +94,7 @@ cursor: move;
 .list-item.dragElem {
   opacity: 0.4;
 }
-.list-item.over {
-  //border: 2px dashed #000;
+.list-item.over {  
   border-top: 2px solid blue;
 }
 .logo {

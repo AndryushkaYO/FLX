@@ -1,0 +1,105 @@
+/* Your styles goes here */
+#root {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.catlist {
+    margin-top: 2vh;
+    width: 50%;
+    border: 2px solid #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.catlist h1 {
+    font-weight: 200;
+    margin-bottom: 0;
+}
+.catlist p{
+	color:#ff0000;
+}
+.add-new-task-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+}
+
+.add-new-task-section input {
+    width: 90%;
+    height: 2vw;
+    padding: 0 1vw;
+    font-size: 1.2vw;
+    border: 1px solid #000;
+    border-radius: 0.6vh;
+}
+
+.add-new-task-section i {
+    width: 6%;
+    margin-left: 1.5%;
+    font-size: 3vw;
+}
+
+.add-new-task-section i {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.add-new-task-section i:hover {
+    cursor: default;
+}
+
+.tasks-section {
+    border-top: 2px solid #000;
+    width: 90%;
+    margin: 4vh 0 3vh 0;
+}
+#task-list{
+	padding: 0;
+}
+.list-item {
+    height: 5vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.list-item .checkbox {
+    width: 5%;
+    font-size: 3vw;
+    line-height: 5%;
+}
+.list-item .checkbox:hover {
+	cursor: pointer;
+}
+.list-item .delete {
+    width: 5%;
+    font-size: 3vw;
+    line-height: 5%;
+}
+.list-item .delete:hover{
+	cursor: pointer;
+}
+.list-item .label {
+    width: 90%;
+cursor: move;
+}
+.list-item.dragElem {
+  opacity: 0.4;
+}
+.list-item.over {
+  //border: 2px dashed #000;
+  border-top: 2px solid blue;
+}
+.logo {
+    width: 5vw;
+    padding-bottom: 1vh;
+}

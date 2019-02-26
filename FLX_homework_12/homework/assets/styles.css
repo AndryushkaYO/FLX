@@ -1,0 +1,87 @@
+/* Your styles go here */
+#root {
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#main-page,
+#add-new-item,
+#modify-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.add-sectin,
+.modify-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttons {
+    margin-top: 3vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.buttons button,
+#main-page button {
+    background-color: #d7d8ea;
+    border-radius: 10px;
+    padding: 0.7vh 1.5vw;
+    font-size: 18px;
+    margin-bottom: 5vh;
+}
+
+#main-page button {
+    padding: 0.7vh 2.2vw;
+    font-size: 20px;
+}
+
+#span {
+    font-size: 22px;
+}
+
+button:hover,
+#main-page button:hover {
+    cursor: pointer;
+    background-color: #DFE0F2;
+}
+
+input {
+    border-radius: 10px;
+    padding: 0.7vh 2vw;
+    font-size: 20px;
+}
+
+#main-page.non-displayed,
+#add-new-item.non-displayed,
+#modify-item.non-displayed {
+    display: none;
+}
+
+#task-list {
+    width: 100%;
+    text-align: center;
+}
+
+.item {
+    margin-top: 2vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+}
+
+.label {
+    width: 80%;
+}

@@ -23,19 +23,19 @@ $(document).on('ready', function () {
     LazyLoad
   -------------------------------------------------------------------------------*/
 
-  function updateBgForMobile(selector, value) {
-    const mobile = window.matchMedia('(max-width: 768px)').matches;
-    if (mobile) {
+  function changeBackgroundForMobile(selector, value) {
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+    if (isMobile) {
       selector.setAttribute('data-bg', value);
     }
   }
 
-  var lazyLoadInstance = new LazyLoad({
+  const lazyLoadInstance = new LazyLoad({
     elements_selector: '.lazy',
     load_delay: 300,
     callback_enter: () => {
       const homeId = document.getElementById('home');
-      updateBgForMobile(homeId, 'url(../img/home-bg_78.jpg)');
+      changeBackgroundForMobile(homeId, 'url(img/home-bg_768.jpg)');
     }
   });
 

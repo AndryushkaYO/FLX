@@ -104,6 +104,7 @@ function Company(companyObj) {
         }
     }
 }
+
 /* -------- Employee ---------*/
 function Employee(employeeObj) {
     if (!employeeObj.name ||
@@ -136,10 +137,12 @@ function Employee(employeeObj) {
 
     this.setSalary = function(newSalary) {
         if (newSalary < _salary) {
+            _historyLog.push(`try to change salary from ${_salary} to ${newSalary}`);
             console.log('ERROR: you cannot set smaller salary!');
         } else if (isNaN(newSalary)) {
             console.log('ERROR: newSalary is NaN!');
         } else {
+            _historyLog.push(`change salary from ${_salary} to ${newSalary}`);
             _salary = newSalary;
         }
     }
@@ -224,11 +227,7 @@ epam.addNewEmployee(vasyl);
 epam.addNewEmployee(ivan);
 epam.addNewEmployee(orest);
 
-
-
-
 console.log('- Adding an employee when list of employees is full -');
-
 console.log('Before:');
 epam.getFormattedListOfEmployees();
 epam.addNewEmployee(anton);
@@ -248,7 +247,6 @@ epam.removeEmployee(3);
 console.log('After:');
 epam.getFormattedListOfEmployees();
 
-
 let andri = new Employee({ name: 'Andri', age: 19, salary: 1000, primarySkill: 'FE' });
 
 console.log('- Trying to fire unhired employee -');
@@ -256,6 +254,7 @@ andri.fire();
 epam.addNewEmployee(andri);
 console.log('- Trying to hire unfired employee -');
 andri.hire();
+
 console.log('- Trying to set wrong/lower salary -');
 andri.setSalary('33%');
 andri.setSalary(500);
@@ -264,11 +263,13 @@ console.log(andri.getSalary());
 andri.setSalary(2000);
 console.log('- Changing salary -');
 console.log(andri.getSalary());
+
 console.log('- Getting logs from  Epam company logs list -');
 epam.getHistory();
 console.log('- Getting logs from employee Ivan logs list -');
 ivan.getHistory();
-
+console.log('- Getting logs from employee Andri logs list -');
+andri.getHistory();
 
 console.log('- Getting  employee Artem worked seconds -');
 setTimeout(() => {
@@ -277,4 +278,3 @@ setTimeout(() => {
     console.log('- Getting logs from employee Artem logs list -');
     artem.getHistory();
 }, 5000);
-

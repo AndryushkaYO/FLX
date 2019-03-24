@@ -9,7 +9,7 @@ function Company(companyObj) {
         typeof companyObj.name !== 'string' ||
         !companyObj.owner ||
         typeof companyObj.owner !== 'string' ||
-        !companyObj.hasOwnProperty('maxCount') ||
+        !companyObj.maxCount ||
         typeof companyObj.maxCount !== 'number') {
         console.log('ERROR: failed to create an instance of Company!');
 
@@ -111,7 +111,7 @@ function Employee(employeeObj) {
         typeof employeeObj.name !== 'string' ||
         !employeeObj.primarySkill ||
         typeof employeeObj.primarySkill !== 'string' ||
-        !employeeObj.hasOwnProperty('age') ||
+        !employeeObj.age ||
         typeof employeeObj.age !== 'number' ||
         !employeeObj.hasOwnProperty('salary') ||
         typeof employeeObj.salary !== 'number') {

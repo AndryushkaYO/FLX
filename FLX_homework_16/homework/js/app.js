@@ -61,6 +61,7 @@ Bot.prototype.move = function(moveDirrection) {
         case 'right':
             this.x += this.speed;
             break;
+        default: console.log('Wrong command!');
     }
 }
 
@@ -107,12 +108,12 @@ Speedbot.prototype.move = function(moveDirrection) {
 /*----------- Main ---------------*/
 
 //Task 1
-var defaults = { a: 123, b: 777 };
-var options = { a: 456 };
-var configs = assign({}, defaults, options); // {a: 456, b: 777}
+let defaults = { a: 123, b: 777 };
+let options = { a: 456 };
+let configs = assign({}, defaults, options); // {a: 456, b: 777}
 
 //Task 2
-let Botty = new Bot({ name: "Betty", speed: 2, x: 0, y: 1 });
+let Botty = new Bot({ name: 'Betty', speed: 2, x: 0, y: 1 });
 Botty.showPosition();
 Botty.move('up');
 Botty.showPosition();
@@ -126,7 +127,7 @@ Botty.showPosition();
 Botty.move('up');
 Botty.showPosition();
 
-let Zoom = new Racebot({ name: "Lightning", speed: 2, x: 0, y: 1 });
+let Zoom = new Racebot({ name: 'Lightning', speed: 2, x: 0, y: 1 });
 Zoom.showPosition();
 Zoom.move('up');
 Zoom.showPosition();
@@ -140,7 +141,7 @@ Zoom.showPosition();
 Zoom.move('up');
 Zoom.showPosition();
 
-let Broom = new Speedbot({ name: "Thunder", speed: 2, x: 0, y: 1 });
+let Broom = new Speedbot({ name: 'Thunder', speed: 2, x: 0, y: 1 });
 Broom.showPosition();
 Broom.move('up');
 Broom.showPosition();

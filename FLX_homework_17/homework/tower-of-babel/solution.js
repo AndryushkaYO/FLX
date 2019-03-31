@@ -1,4 +1,3 @@
-'use strict';
 let a = 5;
 const b = process.argv[2];
 

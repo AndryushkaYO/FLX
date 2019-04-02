@@ -49,7 +49,7 @@ function printUsers(data, catAvatars) {
 
 
 function showPosts(event) {
-
+/*
   let postAuthorName = event;
   let postAuthorAvatar = event.parentNode.childNodes[1].getAttribute('src');
   let id = event.parentNode.parentNode.id;
@@ -68,40 +68,11 @@ function showPosts(event) {
     })
     .then((comments) => {
       const modalContext = document.getElementById('modal-context');
-     /* const ul = document.createElement('ul');
-      ul.setAttribute('class', 'posts-list');
-      modalContent.appendChild(ul);*/
+    
       let commentQuantity = 0;
 for(var post in postsArray) {
        
-        /*
-        const li = document.createElement('li');
-        li.setAttribute('class', 'post-item');
-        ul.appendChild(li);
-        const authorAvatar = document.createElement('img');
-        li.appendChild(authorAvatar);
-        authorAvatar.setAttribute('src', );
-        authorAvatar.setAttribute('class', 'post-author-avatar');
-        const postAuthor = document.createElement('p');
-        postAuthor.setAttribute('class', 'post-author');
-        li.appendChild(postAuthor);
-        const postAuthorText = document.createTextNode(postAuthorName.textContent);
-        postAuthor.appendChild(postAuthorText);
-
-        const divPost = document.createElement('div');
-        li.appendChild(divPost);
-        const postHeader = document.createElement('h3');
-        divPost.appendChild(postHeader);
-        const postHeaderText = document.createTextNode(post.title);
-        postHeader.appendChild(postHeaderText);
-        const postBody = document.createElement('p');
-        divPost.appendChild(postBody);
-        const postBodyText = document.createTextNode(post.body);
-        postBody.appendChild(postBodyText);
-
-        const commentsList = document.createElement('ul');
-        commentsList.setAttribute('class', 'comments-list');
-        li.appendChild(commentsList);*/
+       
         const commentsForPost = comments[index];
 
         commentQuantity += commentsForPost.length;
@@ -134,31 +105,7 @@ for(var post in postsArray) {
           if(comment==5){
             break;
           }
-          /*
-          const commentItem = document.createElement('li');
-          commentItem.setAttribute('class', 'comment-item');
-          commentsList.appendChild(commentItem);
-
-          const authorCommentAvatar = document.createElement('div');
-          commentItem.appendChild(authorCommentAvatar);
-          authorCommentAvatar.setAttribute('class', 'author-comment-avatar');
-          const emailCommentAuthor = document.createElement('p');
-          emailCommentAuthor.setAttribute('class', 'email-comment-author');
-          commentItem.appendChild(emailCommentAuthor);
-          const emailCommentAuthorText = document.createTextNode(comment.email);
-          emailCommentAuthor.appendChild(emailCommentAuthorText);
-
-          const divComment = document.createElement('div');
-          commentItem.appendChild(divComment);
-          divComment.setAttribute('class', 'comment');
-          const commentHeader = document.createElement('h4');
-          divComment.appendChild(commentHeader);
-          const commentHeaderText = document.createTextNode(comment.name);
-          commentHeader.appendChild(commentHeaderText);
-          const commentBody = document.createElement('p');
-          divComment.appendChild(commentBody);
-          const commentBodyText = document.createTextNode(comment.body);
-          commentBody.appendChild(commentBodyText);*/
+         
           write+=`</ul></li>
         </ul>`;
         modalContext.innerHTML+=write;
@@ -167,13 +114,8 @@ for(var post in postsArray) {
           }
         });
       });
-      
+      */
       showModal();
-      fetch(`https://api.thecatapi.com/v1/images/search?limit=${commentQuantity}&size=small&mime_types=jpg`)
-        .then(response => response.json())
-        .then(cats => showCatAvatars(cats.map(cat => cat.url), 'author-comment-avatar', 'comment-avatar-img'))
-        .catch(error => console.log(error));
-    });
 }
 function deleteUser(elem) {
     const id = elem.parentNode.parentNode.id;

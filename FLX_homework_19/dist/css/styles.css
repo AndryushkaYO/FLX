@@ -1,0 +1,64 @@
+#root {
+  height: 100vh;
+  width: 80%;
+  background: #d7d8ea;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+#root h1 {
+  padding: 10px 0;
+  background-color: #929fb0;
+  color: #FFF;
+  width: 100%;
+}
+#root h4 {
+  margin: 5px;
+}
+#root .rules {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#root .rules p {
+  margin-left: 15px;
+  line-height: 4px;
+  text-align: left;
+}
+#root #game-result {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+#root #game-result img {
+  height: 190px;
+  max-width: 100%;
+  object-fit: contain;
+  padding: 0 50px;
+  border-radius: 50%;
+}
+#root .btn {
+  border: none;
+  padding: 10px 20px;
+  color: #FFF;
+  font-size: 18px;
+  border-radius: 5px;
+  background-color: #929fb0;
+  border: #929fb0 2px solid;
+  margin-bottom: 30px;
+}
+#root .btn:hover {
+  background-color: #cdd3db;
+  border: #929fb0 2px solid;
+  color: #929fb0;
+  cursor: pointer;
+}
+
+
+/*# sourceMappingURL=maps/styles.css.map */

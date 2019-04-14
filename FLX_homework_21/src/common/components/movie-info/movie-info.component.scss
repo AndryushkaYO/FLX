@@ -1,0 +1,47 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+.movie-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #a09c9c;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 500px;
+  img {
+    max-height: 400px;
+  }
+
+  p {
+    width: 500px;
+    margin: 5px 0;
+    text-align: center;
+    padding: 5px;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.12);
+      cursor: pointer;
+    }
+  }
+  p.overview {
+    font-style: italic;
+  }
+  a {
+    display: block;
+    padding: 10px 20px;
+    border-radius: 10px;
+
+  border: #a5d4d2 solid 2px;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.15);
+      cursor: pointer;
+
+  border: #d2115a solid 2px;
+    }
+  }
+}

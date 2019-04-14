@@ -1,0 +1,15 @@
+.movie--fresh {
+  background-color: #fff;
+  border: 1px dotted;
+  border-radius: 10px;
+  position: relative;
+
+    &::after {
+        content: "New";
+        color: #df1f5f;
+        font-size: 22px;
+        position: absolute;
+        top: 0px;
+        right: 10px;
+    }
+}
